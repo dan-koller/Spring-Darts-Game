@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/game")
+@SuppressWarnings("unused")
 public class RefereeController {
 
     @Autowired

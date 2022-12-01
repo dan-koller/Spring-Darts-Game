@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@SuppressWarnings("unused")
 public class GameController {
 
     @Autowired
@@ -85,9 +86,8 @@ public class GameController {
      * @param gameId - The id of the game
      * @return - The ResponseEntity object (in this case the Game pojo as JSON)
      */
-    @RequestMapping("/history/{gameId}")
+    @GetMapping("/history/{gameId}")
     public ResponseEntity<?> getGameHistory(@PathVariable String gameId) {
         return gameService.getGameHistory(gameId);
-
     }
 }
